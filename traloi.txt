@@ -8,3 +8,6 @@
 
 6. Nếu cần lưu thông tin của ứng dụng để khôi phục lại trạng thái hiển thị của ứng dụng khi chạy lại ứng dụng thì cần phải 
 thực hiện trong phương thức vòng đời nào? Vì sao?
+  - Cần phải thực hiện ở phương thức onPause()
+  - Bởi vì khi chạy lại ứng dụng sẽ thực hiện các phương thức: onPause() -> onStop() -> onRestart() -> onStart() -> onResume() cho nên
+việc lưu thông tin của ứng dụng ở khâu onPause() sẽ đảm bảo việc khôi phục lại trạng thái hiển thị của ứng dụng.
